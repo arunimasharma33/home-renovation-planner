@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Renovation Planner</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div>
+        <p class="eyebrow">AI Renovation Studio</p>
+        <h1>Home Renovation Planner</h1>
+        <p class="subtitle">Upload room photos, describe your vision, and get a design plan with renderings.</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel input-panel">
+        <h2>Your request</h2>
+
+        <label class="field">
+          <span>Message</span>
+          <textarea
+            id="message"
+            rows="6"
+            placeholder="Example: What can I improve in this kitchen with a $5k budget?"
+          ></textarea>
+        </label>
+
+        <label class="field">
+          <span>Photos (optional)</span>
+          <div class="upload-area" id="dropzone">
+            <input type="file" id="images" accept="image/*" multiple hidden />
+            <button type="button" class="ghost-btn" id="pick-images">Choose images</button>
+            <p class="hint">Current room, inspiration photos, or both</p>
+          </div>
+          <ul id="file-list" class="file-list"></ul>
+        </label>
+
+        <div class="actions">
+          <button id="submit" class="primary-btn">Plan my renovation</button>
+          <button id="reset" class="ghost-btn" type="button">New conversation</button>
+        </div>
+      </section>
+
+      <section class="panel output-panel">
+        <div class="output-header">
+          <h2>Results</h2>
+          <span id="status" class="status idle">Ready</span>
+        </div>
+
+        <div id="output" class="output empty">
+          <p>Your renovation plan and renderings will appear here.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
