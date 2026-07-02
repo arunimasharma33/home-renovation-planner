@@ -39,6 +39,12 @@ This project goes beyond simple LLM wrappers by implementing a production-ready 
 
 ---
 
+## 💻 Demo
+![Live Demo](demo.png)
+
+
+---
+
 ## 💻 Setup & Installation
 
 1. **Install dependencies**
@@ -74,8 +80,3 @@ This project goes beyond simple LLM wrappers by implementing a production-ready 
 
 ---
 
-## 📄 ATS-Friendly Resume Points
-
-- **Architected a Coordinator/Dispatcher Multi-Agent System (Google ADK)** that intelligently routes user intents to a Sequential Planning Pipeline for specialized execution.
-- **Engineered specialized AI agents (Visual Assessor & Design Planner)** utilizing Gemini Pro Multimodal to extract structural layouts from photos and generate strict, budget-aware renovation blueprints.
-- **Developed an asynchronous FastAPI & custom Glassmorphism UI**, orchestrating real-time data streaming, dynamic photorealistic image generation, and robust end-to-end session state management.
