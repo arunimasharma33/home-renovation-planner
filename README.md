@@ -24,28 +24,7 @@ An end-to-end multi-agent AI system that analyzes photos of a room, produces a b
 ## 🏗️ Architecture
 
 Rather than a single prompt-and-response wrapper, this project implements a **Coordinator/Dispatcher multi-agent pipeline**:
-
-```
-                     ┌─────────────────────┐
-   User Input  ───▶  │   Router Agent       │
-  (text/images)      │  (intent detection)  │
-                     └──────────┬───────────┘
-                                │
-              ┌─────────────────┴─────────────────┐
-              ▼                                     ▼
-     ┌──────────────────┐                 ┌────────────────────┐
-     │   Info Agent      │                 │  Planning Pipeline  │
-     │ (quick Q&A)        │                 │   (sequential)      │
-     └──────────────────┘                 └──────────┬─────────┘
-                                                        │
-                          ┌─────────────────────────────┼─────────────────────────────┐
-                          ▼                             ▼                             ▼
-                ┌───────────────────┐       ┌───────────────────┐       ┌───────────────────────┐
-                │  Visual Assessor   │  ──▶  │   Design Planner   │  ──▶  │  Project Coordinator    │
-                │  📸 layout, style, │       │  🎨 spec + budget   │       │  🏗️ timeline, cost      │
-                │  condition extract │       │  cross-reference    │       │  breakdown, render      │
-                └───────────────────┘       └───────────────────┘       └───────────────────────┘
-```
+![System Architecture](architecture.png)
 
 **1. Coordinator/Dispatcher Pattern** — a root Router agent analyzes intent and dispatches to either a lightweight Info Agent (general Q&A) or the full Planning Pipeline (design tasks).
 
