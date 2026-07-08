@@ -13,7 +13,7 @@ An end-to-end, multi-agent AI system that analyzes photos of your space, creates
 
 ---
 
-## 🏗️ Architecture & Interview Talking Points
+## 🏗️ Architecture
 
 This project goes beyond simple LLM wrappers by implementing a production-ready **Multi-Agent Architecture**:
 
